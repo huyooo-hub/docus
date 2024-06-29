@@ -8,7 +8,7 @@ importers:
 
   .:
     dependencies:
-      '@nuxt-themes/elements':
+      '@huyooo-hub/elements':
         specifier: ^0.9.5
         version: 0.9.5(rollup@3.29.4)(vue@3.4.31)
       '@nuxt-themes/tokens':
@@ -1336,6 +1336,22 @@ packages:
     resolution: {integrity: sha512-d2CGZR2o7fS6sWB7DG/3a95bGKQyHMACZ5aW8qGkkqQpUoZV6C0X7Pc7l4ZNMZkfNBf4VWNe9E1jRsf0G146Ew==}
     engines: {node: '>=18.18'}
 
+  /@huyooo-hub/elements@0.9.5(rollup@3.29.4)(vue@3.4.31):
+    resolution: {integrity: sha512-ChvIoFwHmOwDXZqVgKkVBpFgsG3FvT7AheDuMwH9GBjIVHlfdXYnNEdi7O2XBELdIQreG5pZcHk2RkWlJWKUkQ==}
+    dependencies:
+      '@nuxt-themes/tokens': 1.9.1(rollup@3.29.4)(vue@3.4.31)
+      '@vueuse/core': 9.13.0(vue@3.4.31)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - magicast
+      - postcss
+      - rollup
+      - sass
+      - supports-color
+      - vue
+      - vue-tsc
+    dev: false
+
   /@iarna/toml@2.2.5:
     resolution: {integrity: sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==}
     dev: true
@@ -1507,22 +1523,6 @@ packages:
   /@npmcli/redact@2.0.1:
     resolution: {integrity: sha512-YgsR5jCQZhVmTJvjduTOIHph0L73pK8xwMVaDY0PatySqVM9AZj93jpoXYSJqfHFxFkN9dmqTw6OiqExsS3LPw==}
     engines: {node: ^16.14.0 || >=18.0.0}
-
-  /@nuxt-themes/elements@0.9.5(rollup@3.29.4)(vue@3.4.31):
-    resolution: {integrity: sha512-uAA5AiIaT1SxCBjNIURJyCDPNR27+8J+t3AWuzWyhbNPr3L1inEcETZ3RVNzFdQE6mx7MGAMwFBqxPkOUhZQuA==}
-    dependencies:
-      '@nuxt-themes/tokens': 1.9.1(rollup@3.29.4)(vue@3.4.31)
-      '@vueuse/core': 9.13.0(vue@3.4.31)
-    transitivePeerDependencies:
-      - '@vue/composition-api'
-      - magicast
-      - postcss
-      - rollup
-      - sass
-      - supports-color
-      - vue
-      - vue-tsc
-    dev: false
 
   /@nuxt-themes/tokens@1.9.1(rollup@3.29.4)(vue@3.4.31):
     resolution: {integrity: sha512-5C28kfRvKnTX8Tux+xwyaf+2pxKgQ53dC9l6C33sZwRRyfUJulGDZCFjKbuNq4iqVwdGvkFSQBYBYjFAv6t75g==}
@@ -2404,6 +2404,7 @@ packages:
     dependencies:
       is-glob: 4.0.3
       micromatch: 4.0.7
+      napi-wasm: 1.1.0
     bundledDependencies:
       - napi-wasm
 
@@ -7960,6 +7961,9 @@ packages:
     resolution: {integrity: sha512-oLxFY2gd2IqnjcYyOXD8XGCftpGtZP2AbHbOkthDkvRywH5ayNtPVy9YlOPcHckXzbLTCHpkb7FB+yuxKV13pQ==}
     engines: {node: ^18 || >=20}
     hasBin: true
+
+  /napi-wasm@1.1.0:
+    resolution: {integrity: sha512-lHwIAJbmLSjF9VDRm9GoVOy9AGp3aIvkjv+Kvz9h16QR3uSVYH78PNQUnT2U4X53mhlnV2M7wrhibQ3GHicDmg==}
 
   /natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
