@@ -27,7 +27,6 @@
     "preview": "nuxi preview .starters/default",
     "lint": "eslint .",
     "release": "release-it",
-    "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare .starters"
   },
   "dependencies": {
     "@nuxt-themes/elements": "^0.9.5",
