@@ -26,7 +26,7 @@
     "generate": "nuxi generate .starters/default",
     "preview": "nuxi preview .starters/default",
     "lint": "eslint .",
-    "release": "release-it",
+    "release": "release-it"
   },
   "dependencies": {
     "@nuxt-themes/elements": "^0.9.5",
