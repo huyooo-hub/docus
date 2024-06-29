@@ -23,15 +23,15 @@ If you want to add Docus to an existing codebase, you can do so with:
 - Install the dependency:
 
 ```bash
-npm install @nuxt-themes/docus
+npm install @huyooo-hub/docus
 ```
 
 - Add it to your extends key in `nuxt.config`:
 
 ```ts
 defineNuxtConfig({
-  extends: '@nuxt-themes/docus'
-})
+  extends: "@huyooo-hub/docus",
+});
 ```
 
 ## Features ✨
@@ -77,20 +77,16 @@ defineNuxtConfig({
 [MIT License](./LICENSE)
 
 <!-- Badges -->
-[npm-version-src]: https://img.shields.io/npm/v/@nuxt-themes/docus/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
-[npm-version-href]: https://npmjs.com/package/@nuxt-themes/docus
 
-[npm-downloads-src]: https://img.shields.io/npm/dm/@nuxt-themes/docus.svg?style=flat&colorA=18181B&colorB=28CF8D
-[npm-downloads-href]: https://npmjs.com/package/@nuxt-themes/docus
-
+[npm-version-src]: https://img.shields.io/npm/v/@huyooo-hub/docus/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
+[npm-version-href]: https://npmjs.com/package/@huyooo-hub/docus
+[npm-downloads-src]: https://img.shields.io/npm/dm/@huyooo-hub/docus.svg?style=flat&colorA=18181B&colorB=28CF8D
+[npm-downloads-href]: https://npmjs.com/package/@huyooo-hub/docus
 [license-src]: https://img.shields.io/github/license/nuxt-themes/docus.svg?style=flat&colorA=18181B&colorB=28CF8D
 [license-href]: https://github.com/nuxt-themes/docus/blob/main/LICENSE
-
 [nuxt-studio-src]: https://img.shields.io/badge/Open%20in%20Nuxt%20Studio-18181B?&logo=nuxt.js&logoColor=3BB5EC
 [nuxt-studio-href]: https://nuxt.studio/themes/docus
-
 [nuxt-src]: https://img.shields.io/badge/Nuxt-18181B?&logo=nuxt.js
 [nuxt-href]: https://nuxt.com
-
 [volta-src]: https://user-images.githubusercontent.com/904724/209143798-32345f6c-3cf8-4e06-9659-f4ace4a6acde.svg
 [volta-href]: https://volta.net/nuxt-themes/docus?utm_source=readme_docus
