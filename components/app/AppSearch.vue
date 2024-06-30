@@ -375,8 +375,8 @@ css({
           flexShrink: 0,
           marginLeft: '{space.4}',
           marginRight: '{space.4}',
-          width: '{size.20}',
-          height: '{size.20}',
+          width: '{huyooo.size20}',
+          height: '{huyooo.size20}',
         },
         '.close-button': {
           display: 'flex',
@@ -385,8 +385,8 @@ css({
         '.close-icon': {
           color: '{elements.text.secondary.color.static}',
           flexShrink: 0,
-          width: '{size.20}',
-          height: '{size.20}',
+          width: '{huyooo.size20}',
+          height: '{huyooo.size20}',
         },
         input: {
           width: '100%',
@@ -442,8 +442,8 @@ css({
           svg: {
             flexShrink: '0',
             opacity: '0.5',
-            width: '{size.20}',
-            height: '{size.20}',
+            width: '{huyooo.size20}',
+            height: '{huyooo.size20}',
             marginLeft: '{space.2}',
             marginRight: '{space.2}',
           },

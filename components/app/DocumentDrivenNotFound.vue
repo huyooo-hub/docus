@@ -41,7 +41,7 @@ css({
 
     main: {
       mx: 'auto',
-      maxWidth: '{size.full}',
+      maxWidth: '{huyooo.sizefull}',
 
       '@sm': {
         display: 'flex',

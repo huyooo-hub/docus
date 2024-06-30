@@ -2,13 +2,13 @@
 
 :root {
   /* DocSearch */
-  --docsearch-primary-color: $dt('color.primary.500') !important;
+  --docsearch-primary-color: $dt("color.primary.500") !important;
 }
 
 .dark:root {
   color-scheme: dark;
   /* DocSearch */
-  --docsearch-primary-color: $dt('color.primary.500') !important;
+  --docsearch-primary-color: $dt("color.primary.500") !important;
   --docsearch-text-color: rgb(245, 246, 247);
   --docsearch-container-background: rgba(9, 10, 17, 0.8);
   --docsearch-modal-background: rgb(21, 23, 42);
@@ -40,10 +40,10 @@ body {
   overflow-y: scroll;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: $dt('docus.body.backgroundColor');
-  color: $dt('docus.body.color');
-  font-family: $dt('docus.body.fontFamily');
-  min-width: $dt('size.xs');
+  background-color: $dt("docus.body.backgroundColor");
+  color: $dt("docus.body.color");
+  font-family: $dt("docus.body.fontFamily");
+  min-width: $dt("huyooo.sizexs");
 }
 
 .docus-scrollbars {
@@ -54,32 +54,32 @@ body {
   }
 
   & ::-webkit-scrollbar-track {
-    background: $dt('color.gray.100');
+    background: $dt("color.gray.100");
   }
 
   & ::-webkit-scrollbar-thumb {
     border-radius: 0.6em;
-    background: $dt('color.gray.300');
+    background: $dt("color.gray.300");
     &:hover {
-      background: $dt('color.gray.400');
+      background: $dt("color.gray.400");
     }
     &:active {
-      background: $dt('color.gray.500');
+      background: $dt("color.gray.500");
     }
   }
 
   &.dark {
     & ::-webkit-scrollbar-track {
-      background: $dt('color.gray.800');
+      background: $dt("color.gray.800");
     }
 
     & ::-webkit-scrollbar-thumb {
-      background: $dt('color.gray.700');
+      background: $dt("color.gray.700");
       &:hover {
-        background: $dt('color.gray.600');
+        background: $dt("color.gray.600");
       }
       &:active {
-        background: $dt('color.gray.500');
+        background: $dt("color.gray.500");
       }
     }
   }
