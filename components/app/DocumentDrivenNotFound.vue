@@ -80,7 +80,7 @@ css({
           h1: {
             fontSize: '{huyooo.fontSize.4xl}',
             fontWeight: '{huyooo.fontWeight.extrabold}',
-            letterSpacing: '{letterSpacing.tight}',
+            letterSpacing: '{huyooo.letterSpacing.tight}',
             color: '{huyooo.color.gray.900}',
             '@dark': {
               color: '{huyooo.color.gray.200}',
