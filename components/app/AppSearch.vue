@@ -305,7 +305,7 @@ css({
   button: {
     padding: '{space.2} {space.2}',
     '.content': {
-      borderRadius: '{huyooo.radiimd}',
+      borderRadius: '{huyooo.radii.md}',
       display: 'flex',
       alignItems: 'center',
       color: '{huyooo.color.gray.500}',

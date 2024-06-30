@@ -73,7 +73,7 @@ css({
         gap: '{space.2}',
         padding: '{space.2} {space.4}',
         fontSize: '{fontSize.sm}',
-        borderRadius: '{huyooo.radiimd}',
+        borderRadius: '{huyooo.radii.md}',
         outline: 'none',
         transition: 'background 200ms ease',
 
