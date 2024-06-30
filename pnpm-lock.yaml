@@ -11,12 +11,12 @@ importers:
       '@huyooo-hub/elements':
         specifier: ^0.9.5
         version: 0.9.5(rollup@3.29.4)(vue@3.4.31)
-      '@nuxt-themes/tokens':
-        specifier: ^1.9.1
-        version: 1.9.1(rollup@3.29.4)(vue@3.4.31)
-      '@nuxt-themes/typography':
-        specifier: ^0.11.0
-        version: 0.11.0(rollup@3.29.4)(vue@3.4.31)
+      '@huyooo-hub/tokens':
+        specifier: ^2.1.2
+        version: 2.1.2(rollup@3.29.4)(vue@3.4.31)
+      '@huyooo-hub/typography':
+        specifier: ^1.0.2
+        version: 1.0.2(rollup@3.29.4)(vue@3.4.31)
       '@nuxt/content':
         specifier: ^2.12.1
         version: 2.13.0(nuxt@3.12.2)(rollup@3.29.4)(vue@3.4.31)
@@ -1352,6 +1352,44 @@ packages:
       - vue-tsc
     dev: false
 
+  /@huyooo-hub/tokens@2.1.2(rollup@3.29.4)(vue@3.4.31):
+    resolution: {integrity: sha512-lanx50EOkiRnRIN+GZuvglJXV7kpuR/d4RovAuvQkDTm3NknA/MPFc4iJ+WixA7BfmGn7MxKHygKq47RCdq4zg==}
+    dependencies:
+      '@nuxtjs/color-mode': 3.4.2(rollup@3.29.4)
+      '@vueuse/core': 10.11.0(vue@3.4.31)
+      pinceau: 0.20.1
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - magicast
+      - postcss
+      - rollup
+      - sass
+      - supports-color
+      - vue
+      - vue-tsc
+    dev: false
+
+  /@huyooo-hub/typography@1.0.2(rollup@3.29.4)(vue@3.4.31):
+    resolution: {integrity: sha512-Q5+eUSuDCKgKte5aGkP7c+YcXODpOQ8YSu8cBq2G+2KZVepgUnLBhMbhZ76bNR0UEoR2ReB5KYF9zysUMHKozw==}
+    dependencies:
+      '@huyooo-hub/tokens': 2.1.2(rollup@3.29.4)(vue@3.4.31)
+      '@nuxtjs/color-mode': 3.4.2(rollup@3.29.4)
+      '@vueuse/core': 10.11.0(vue@3.4.31)
+      nuxt-config-schema: 0.4.6(rollup@3.29.4)
+      nuxt-icon: 0.5.0(rollup@3.29.4)(vue@3.4.31)
+      pinceau: 0.20.1
+      ufo: 1.5.3
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - magicast
+      - postcss
+      - rollup
+      - sass
+      - supports-color
+      - vue
+      - vue-tsc
+    dev: false
+
   /@iarna/toml@2.2.5:
     resolution: {integrity: sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==}
     dev: true
@@ -1532,24 +1570,6 @@ packages:
       pinceau: 0.18.9
     transitivePeerDependencies:
       - '@vue/composition-api'
-      - magicast
-      - postcss
-      - rollup
-      - sass
-      - supports-color
-      - vue
-      - vue-tsc
-    dev: false
-
-  /@nuxt-themes/typography@0.11.0(rollup@3.29.4)(vue@3.4.31):
-    resolution: {integrity: sha512-TqyvD7sDWnqGmL00VtuI7JdmNTPL5/g957HCAWNzcNp+S20uJjW/FXSdkM76d4JSVDHvBqw7Wer3RsqVhqvA4w==}
-    dependencies:
-      '@nuxtjs/color-mode': 3.4.2(rollup@3.29.4)
-      nuxt-config-schema: 0.4.6(rollup@3.29.4)
-      nuxt-icon: 0.3.3(rollup@3.29.4)(vue@3.4.31)
-      pinceau: 0.18.9
-      ufo: 1.5.3
-    transitivePeerDependencies:
       - magicast
       - postcss
       - rollup
@@ -3249,6 +3269,10 @@ packages:
     resolution: {integrity: sha512-2WoM6O9VyuHDPAnvCXr7LBJQ8ZRHDnuQAFsL1dWXp561Iq2l9whdNtPuMcozLGJGUUrFfVBXIrHY4sfxxScgWg==}
     dev: false
 
+  /@unocss/reset@0.54.3:
+    resolution: {integrity: sha512-5FjdfZKvwJ0JrUr2rVWnZzHfg7jOCMaJjD93VvCdFIr8Q9dChSzuZoWGCcx6EEsZm5zEfpB7+qwwz6Y2lN9vxg==}
+    dev: false
+
   /@vercel/nft@0.26.5:
     resolution: {integrity: sha512-NHxohEqad6Ra/r4lGknO52uc/GrWILXAMs1BB4401GTqww0fw1bAqzpG1XHuDO+dprg4GvsD9ZLLSsdo78p9hQ==}
     engines: {node: '>=16'}
@@ -3904,6 +3928,13 @@ packages:
 
   /ast-types@0.15.2:
     resolution: {integrity: sha512-c27loCv9QkZinsa5ProX751khO9DJl/AcB5c2KNtA6NRvHKS0PgLfcftz72KVq504vB0Gku5s2kUZzDBvQWvHg==}
+    engines: {node: '>=4'}
+    dependencies:
+      tslib: 2.6.3
+    dev: false
+
+  /ast-types@0.16.1:
+    resolution: {integrity: sha512-6t10qk83GOG8p0vKmaCr8eiilZwO171AvbROMtvvNiwrTly62t+7XkA8RdIIVbpMhCASAsxgAzdRSwh6nw/5Dg==}
     engines: {node: '>=4'}
     dependencies:
       tslib: 2.6.3
@@ -8269,12 +8300,11 @@ packages:
       - supports-color
     dev: false
 
-  /nuxt-icon@0.3.3(rollup@3.29.4)(vue@3.4.31):
-    resolution: {integrity: sha512-KdhJAigBGTP8/YIFZ3orwetk40AgLq6VQ5HRYuDLmv5hiDptor9Ro+WIdZggHw7nciRxZvDdQkEwi9B5G/jrkQ==}
+  /nuxt-icon@0.5.0(rollup@3.29.4)(vue@3.4.31):
+    resolution: {integrity: sha512-ND4yh8kW4VyIbORP3cWjgVrOAvy6QSDFDTJltakdqmxVfVysNIs/bx2NzlkHeR1EOS8E/jVcemfTPmRsJ7WUVw==}
     dependencies:
       '@iconify/vue': 4.1.2(vue@3.4.31)
       '@nuxt/kit': 3.12.2(magicast@0.3.4)(rollup@3.29.4)
-      nuxt-config-schema: 0.4.6(rollup@3.29.4)
     transitivePeerDependencies:
       - magicast
       - rollup
@@ -8841,6 +8871,35 @@ packages:
       - vue-tsc
     dev: false
 
+  /pinceau@0.20.1:
+    resolution: {integrity: sha512-A6EEYijgSudIbmZH9opFxBLqprFFxaTMhzJM8GcpE0J41VNZa5kPh/3zv2s4Q7gTm1jjbyUyZPIuF4BsNXP6Nw==}
+    dependencies:
+      '@unocss/reset': 0.54.3
+      '@volar/vue-language-core': 1.6.5
+      acorn: 8.12.0
+      chroma-js: 2.4.2
+      consola: 3.2.3
+      csstype: 3.1.3
+      defu: 6.1.4
+      magic-string: 0.30.10
+      nanoid: 4.0.2
+      ohash: 1.1.3
+      pathe: 1.1.2
+      postcss-custom-properties: 13.3.0
+      postcss-dark-theme-class: 0.7.3
+      postcss-nested: 6.0.1(postcss@8.4.38)
+      recast: 0.23.9
+      scule: 1.3.0
+      style-dictionary-esm: 1.9.2
+      unbuild: 1.2.1
+      unplugin: 1.10.2
+    transitivePeerDependencies:
+      - postcss
+      - sass
+      - supports-color
+      - vue-tsc
+    dev: false
+
   /pkg-types@1.1.1:
     resolution: {integrity: sha512-ko14TjmDuQJ14zsotODv7dBlwxKhUKQEhuhmbqo1uCi9BB0Z2alo/wAXg6q1dTR5TyuqYyWhjtfe/Tsh+X28jQ==}
     dependencies:
@@ -8900,6 +8959,21 @@ packages:
 
   /postcss-custom-properties@13.1.4:
     resolution: {integrity: sha512-iSAdaZrM3KMec8cOSzeTUNXPYDlhqsMJHpt62yrjwG6nAnMtRHPk5JdMzGosBJtqEahDolvD5LNbcq+EZ78o5g==}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    peerDependenciesMeta:
+      postcss:
+        optional: true
+    dependencies:
+      '@csstools/cascade-layer-name-parser': 1.0.11(@csstools/css-parser-algorithms@2.6.3)(@csstools/css-tokenizer@2.3.1)
+      '@csstools/css-parser-algorithms': 2.6.3(@csstools/css-tokenizer@2.3.1)
+      '@csstools/css-tokenizer': 2.3.1
+      postcss-value-parser: 4.2.0
+    dev: false
+
+  /postcss-custom-properties@13.3.0:
+    resolution: {integrity: sha512-q4VgtIKSy5+KcUvQ0WxTjDy9DZjQ5VCXAZ9+tT9+aPMbA0z6s2t1nMw0QHszru1ib5ElkXl9JUpYYU37VVUs7g==}
     engines: {node: ^14 || ^16 || >=18}
     peerDependencies:
       postcss: ^8.4
@@ -9478,6 +9552,17 @@ packages:
       ast-types: 0.15.2
       esprima: 4.0.1
       source-map: 0.6.1
+      tslib: 2.6.3
+    dev: false
+
+  /recast@0.23.9:
+    resolution: {integrity: sha512-Hx/BGIbwj+Des3+xy5uAtAbdCyqK9y9wbBcDFDYanLS9JnMqf7OeF87HQwUimE87OEc72mr6tkKUKMBBL+hF9Q==}
+    engines: {node: '>= 4'}
+    dependencies:
+      ast-types: 0.16.1
+      esprima: 4.0.1
+      source-map: 0.6.1
+      tiny-invariant: 1.3.3
       tslib: 2.6.3
     dev: false
 

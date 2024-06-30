@@ -42,7 +42,7 @@ defineNuxtConfig({
 - Table of contents support
 - Configurable design system integration
 - Replace, extend, customize any component in a breeze
-- Leverages [**@nuxt-themes/typography**](https://github.com/nuxt-themes/typography)
+- Leverages [**@huyooo-hub/typography**](https://github.com/nuxt-themes/typography)
 - Used on [Content Documentation](https://content.nuxtjs.org)
 
 ## They are using it 🎨
