@@ -86,7 +86,7 @@ css({
     },
     // Dialog content
     '& > div': {
-      maxWidth: '{huyooo.sizexs}',
+      maxWidth: '{huyooo.size.xs}',
       width: '100%',
       minHeight: '100%',
       boxShadow: '{huyooo.shadow.md}',

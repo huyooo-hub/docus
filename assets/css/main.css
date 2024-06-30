@@ -43,7 +43,7 @@ body {
   background-color: $dt("docus.body.backgroundColor");
   color: $dt("docus.body.color");
   font-family: $dt("docus.body.fontFamily");
-  min-width: $dt("huyooo.sizexs");
+  min-width: $dt("huyooo.size.xs");
 }
 
 .docus-scrollbars {
