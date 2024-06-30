@@ -106,7 +106,7 @@ export default defineTheme({
         initial: "{huyooo.color.gray.800}",
         dark: "{huyooo.color.gray.200}",
       },
-      fontFamily: "{font.sans}",
+      fontFamily: "{huyooo.font.sans}",
     },
     header: {
       height: "64px",
@@ -118,7 +118,7 @@ export default defineTheme({
       },
       title: {
         fontSize: "{fontSize.2xl}",
-        fontWeight: "{fontWeight.bold}",
+        fontWeight: "{huyooo.fontWeight.bold}",
         color: {
           static: {
             initial: "{huyooo.color.gray.900}",

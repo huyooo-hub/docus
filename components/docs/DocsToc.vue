@@ -1,6 +1,6 @@
 <script setup lang="ts">
-const { toc } = useContent()
-const emit = defineEmits(['move'])
+const { toc } = useContent();
+const emit = defineEmits(["move"]);
 </script>
 
 <template>
@@ -10,10 +10,7 @@ const emit = defineEmits(['move'])
         <span>Table of Contents</span>
       </div>
 
-      <DocsTocLinks
-        :links="toc.links"
-        @move="emit('move')"
-      />
+      <DocsTocLinks :links="toc.links" @move="emit('move')" />
     </template>
   </div>
 </template>
@@ -31,7 +28,7 @@ css({
         overflow: 'hidden',
         fontSize: '{text.sm.fontSize}',
         lineHeight: '{text.sm.lineHeight}',
-        fontWeight: '{fontWeight.semibold}'
+        fontWeight: '{huyooo.fontWeight.semibold}'
       }
     }
   }

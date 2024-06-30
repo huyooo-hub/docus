@@ -124,7 +124,7 @@ css({
         p: {
           fontSize: '{text.xs.fontSize}',
           lineHeight: '{text.xs.lineHeight}',
-          fontWeight: '{fontWeight.medium}'
+          fontWeight: '{huyooo.fontWeight.medium}'
         },
 
         '&-icon': {
@@ -152,7 +152,7 @@ css({
           padding: '{huyooo.space.2}',
           fontSize: '{text.sm.fontSize}',
           lineHeight: '{text.sm.lineHeight}',
-          fontWeight: '{fontWeight.medium}'
+          fontWeight: '{huyooo.fontWeight.medium}'
         }
 
       },

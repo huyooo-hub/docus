@@ -51,7 +51,7 @@ css({
       // 404
       '& > p': {
         fontSize: '{fontSize.4xl}',
-        fontWeight: '{fontWeight.bold}',
+        fontWeight: '{huyooo.fontWeight.bold}',
         lineHeight: '{lead.tight}',
         color: '{huyooo.color.primary.500}',
         '@sm': {
@@ -79,7 +79,7 @@ css({
 
           h1: {
             fontSize: '{fontSize.4xl}',
-            fontWeight: '{fontWeight.extrabold}',
+            fontWeight: '{huyooo.fontWeight.extrabold}',
             letterSpacing: '{letterSpacing.tight}',
             color: '{huyooo.color.gray.900}',
             '@dark': {

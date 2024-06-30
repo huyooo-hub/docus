@@ -262,7 +262,7 @@ css({
         '.title': {
           fontSize: '{text.sm.fontSize}',
           lineHeight: '{text.sm.lineHeight}',
-          fontWeight: '{fontWeight.semibold}',
+          fontWeight: '{huyooo.fontWeight.semibold}',
           marginRight: '{huyooo.space.1}',
         },
         '.icon': {

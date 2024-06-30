@@ -178,7 +178,7 @@ css({
       padding: '{huyooo.space.rem.375} 0',
       fontSize: '{text.sm.fontSize}',
       lineHeight: '{text.sm.lineHeight}',
-      fontWeight: '{fontWeight.semibold}',
+      fontWeight: '{huyooo.fontWeight.semibold}',
       width: "100%",
       color: '{huyooo.color.gray.900}',
       '@dark': {
@@ -226,7 +226,7 @@ css({
       },
       '&.active': {
         color: '{huyooo.color.primary.500}',
-        fontWeight: '{fontWeight.medium}'
+        fontWeight: '{huyooo.fontWeight.medium}'
       },
       '.content': {
         display: 'inline-flex',
