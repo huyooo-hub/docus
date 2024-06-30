@@ -1,224 +1,217 @@
 <script setup lang="ts">
-import { useFuse } from '@vueuse/integrations/useFuse'
-import { useFocusTrap } from '@vueuse/integrations/useFocusTrap'
-import { useMagicKeys } from '@vueuse/core'
-import type { UseFuseOptions } from '@vueuse/integrations/useFuse'
+import { useFuse } from "@vueuse/integrations/useFuse";
+import { useFocusTrap } from "@vueuse/integrations/useFocusTrap";
+import { useMagicKeys } from "@vueuse/core";
+import type { UseFuseOptions } from "@vueuse/integrations/useFuse";
 
 const props = defineProps({
   fuse: {
     type: Object as PropType<Partial<UseFuseOptions<DocusSearchResult>>>,
     default: () => ({
       fuseOptions: {
-        keys: [
-          'title',
-          'description',
-          'keywords',
-          'body'
-        ],
+        keys: ["title", "description", "keywords", "body"],
         ignoreLocation: true,
         threshold: 0,
         includeMatches: true,
         includeScore: true,
       },
-      matchAllWhenSearchEmpty: true
-    })
+      matchAllWhenSearchEmpty: true,
+    }),
   },
-})
+});
 
 type DocusSearchResult = {
-  id: string
-  path: string
-  dir: string
-  title: string
-  description: string
-  keywords: string[]
-  body?: any[]
-}
+  id: string;
+  path: string;
+  dir: string;
+  title: string;
+  description: string;
+  keywords: string[];
+  body?: any[];
+};
 
-const q = ref('')
-const searchContentRef = ref<HTMLDivElement>()
-const searchInputRef = ref<HTMLInputElement>()
-const resultsAreaRef = ref<HTMLDivElement>()
-const selected = ref(-1)
+const q = ref("");
+const searchContentRef = ref<HTMLDivElement>();
+const searchInputRef = ref<HTMLInputElement>();
+const resultsAreaRef = ref<HTMLDivElement>();
+const selected = ref(-1);
 
-const show = ref(false)
+const show = ref(false);
 
-const { close, open } = useMenu()
+const { close, open } = useMenu();
 
-const { activate, deactivate } = useFocusTrap(searchContentRef)
+const { activate, deactivate } = useFocusTrap(searchContentRef);
 
-const { navigation } = useContent()
+const { navigation } = useContent();
 
-const { meta_K, Escape } = useMagicKeys()
+const { meta_K, Escape } = useMagicKeys();
 
 const { data: files } = await useLazyAsyncData<DocusSearchResult[]>(
-  'search-api',
-  () => $fetch('/api/search', { parseResponse: JSON.parse })
-)
+  "search-api",
+  () => $fetch("/api/search", { parseResponse: JSON.parse })
+);
 
-const { results } = useFuse<DocusSearchResult>(
-  q,
-  files as any,
-  props.fuse
-)
+const { results } = useFuse<DocusSearchResult>(q, files as any, props.fuse);
 
-function findNavItem(
-  children: any,
-  path: string,
-  parent: any
-) {
+function findNavItem(children: any, path: string, parent: any) {
   for (const child of children) {
     if (child._path === path) {
       return {
         directoryTitle: parent.title,
-        directoryIcon: parent.icon
-      }
+        directoryIcon: parent.icon,
+      };
     }
     if (child.children) {
-      const result: any = findNavItem(child.children, path, child)
+      const result: any = findNavItem(child.children, path, child);
       if (result) {
-        return result
+        return result;
       }
     }
   }
-  return undefined
+  return undefined;
 }
 
-function getNavItemMeta(
-  path: string
-) {
-  let result
+function getNavItemMeta(path: string) {
+  let result;
   for (const item of navigation.value) {
     if (item.children) {
-      const found = findNavItem(item.children, path, item)
-      if (found) { result = found }
+      const found = findNavItem(item.children, path, item);
+      if (found) {
+        result = found;
+      }
     }
   }
-  return result
+  return result;
 }
 
-function highlight(
-  text: string,
-  result: any
-): string {
-  const { indices, value }: { indices: number[][], value: string } = result || { indices: [], value: '' }
+function highlight(text: string, result: any): string {
+  const { indices, value }: { indices: number[][]; value: string } = result || {
+    indices: [],
+    value: "",
+  };
 
-  if (text === value) return ''
+  if (text === value) return "";
 
-  let content = ''
-  let nextUnhighlightedIndiceStartingIndex = 0
+  let content = "";
+  let nextUnhighlightedIndiceStartingIndex = 0;
 
   indices.forEach((indice) => {
-    const lastIndiceNextIndex = indice[1] + 1
-    const isMatched = (lastIndiceNextIndex - indice[0]) >= q.value.length
+    const lastIndiceNextIndex = indice[1] + 1;
+    const isMatched = lastIndiceNextIndex - indice[0] >= q.value.length;
 
     content += [
       value.substring(nextUnhighlightedIndiceStartingIndex, indice[0]),
-      isMatched && '<mark>',
+      isMatched && "<mark>",
       value.substring(indice[0], lastIndiceNextIndex),
-      isMatched && '</mark>'
-    ].filter(Boolean).join('')
+      isMatched && "</mark>",
+    ]
+      .filter(Boolean)
+      .join("");
 
-    nextUnhighlightedIndiceStartingIndex = lastIndiceNextIndex
-  })
+    nextUnhighlightedIndiceStartingIndex = lastIndiceNextIndex;
+  });
 
-  content += value.substring(nextUnhighlightedIndiceStartingIndex)
+  content += value.substring(nextUnhighlightedIndiceStartingIndex);
 
-  const index = content.indexOf('<mark>')
+  const index = content.indexOf("<mark>");
 
   if (index > 60) {
-    content = `${content.substring(index - 60)}`
+    content = `${content.substring(index - 60)}`;
   }
 
-  return `${content}”`
+  return `${content}”`;
 }
 
 function down() {
-  if (selected.value === -1) { selected.value = 0 }
-  else if (selected.value === results.value.length - 1) { /* Do nothing  */ }
-  else { selected.value = selected.value + 1 }
+  if (selected.value === -1) {
+    selected.value = 0;
+  } else if (selected.value === results.value.length - 1) {
+    /* Do nothing  */
+  } else {
+    selected.value = selected.value + 1;
+  }
 }
 
 function up() {
-  if (selected.value === -1) { selected.value = results.value.length - 1 }
-  else if (selected.value === 0) { /* Do nothing */ }
-  else { selected.value = selected.value - 1 }
+  if (selected.value === -1) {
+    selected.value = results.value.length - 1;
+  } else if (selected.value === 0) {
+    /* Do nothing */
+  } else {
+    selected.value = selected.value - 1;
+  }
 }
 
 function go(index: number) {
-  const selectedItem = results?.value?.[index]?.item
-  const path = selectedItem?.path
+  const selectedItem = results?.value?.[index]?.item;
+  const path = selectedItem?.path;
 
   if (path) {
-    show.value = false
-    useRouter().push(path)
+    show.value = false;
+    useRouter().push(path);
   }
 }
 
 function closeButtonHandler() {
   if (q.value) {
-    q.value = ''
-    selected.value = -1
-    searchInputRef.value?.focus?.()
+    q.value = "";
+    selected.value = -1;
+    searchInputRef.value?.focus?.();
   } else {
-    show.value = false
+    show.value = false;
   }
 }
 
-onMounted (() => {
-  const route = useRoute()
+onMounted(() => {
+  const route = useRoute();
   if (route.query.q) {
-    show.value = true
-    q.value = route.query.q
+    show.value = true;
+    q.value = route.query.q;
   }
-})
+});
 
 // Scroll to selected item on change
-watch(selected, value => {
-  const nextId = results?.value?.[value]?.item?.id
-  if (nextId) document.querySelector(`[id="${nextId}"]`)?.scrollIntoView({ block: 'nearest' })
-})
+watch(selected, (value) => {
+  const nextId = results?.value?.[value]?.item?.id;
+  if (nextId)
+    document
+      .querySelector(`[id="${nextId}"]`)
+      ?.scrollIntoView({ block: "nearest" });
+});
 
 // Reset selected item on search change
-watch(
-  q,
-  _ => { selected.value = 0 }
-)
+watch(q, (_) => {
+  selected.value = 0;
+});
 
 // Reset local data when modal closing
 watch(show, (value) => {
   if (!value) {
-    q.value = ''
-    selected.value = -1
-    deactivate()
-    close()
+    q.value = "";
+    selected.value = -1;
+    deactivate();
+    close();
   } else {
-    open()
+    open();
     nextTick(() => {
-      activate()
-    })
+      activate();
+    });
   }
-})
+});
 
 watch(meta_K, (v) => {
   if (v) {
-    show.value = !show.value
+    show.value = !show.value;
   }
-})
+});
 
 watch(Escape, () => {
-  if (show.value)
-    show.value = false
-})
-
+  if (show.value) show.value = false;
+});
 </script>
 
 <template>
-  <button
-    type="button"
-    aria-label="Search"
-    @click="show = true"
-  >
+  <button type="button" aria-label="Search" @click="show = true">
     <span class="content">
       <Icon name="heroicons-outline:search" />
       <span>Search</span>
@@ -237,15 +230,9 @@ watch(Escape, () => {
       class="search-content"
       @click="show = false"
     >
-      <div
-        class="search-window"
-        @click.stop
-      >
+      <div class="search-window" @click.stop>
         <div class="search-input">
-          <Icon
-            name="heroicons-outline:search"
-            class="search-icon"
-          />
+          <Icon name="heroicons-outline:search" class="search-icon" />
           <input
             ref="searchInputRef"
             v-model="q"
@@ -254,15 +241,9 @@ watch(Escape, () => {
             @keydown.up.prevent="up"
             @keydown.down.prevent="down"
             @keydown.enter="go(selected)"
-          >
-          <button
-            class="close-button"
-            @click="closeButtonHandler"
-          >
-            <Icon
-              name="heroicons:x-mark"
-              class="close-icon"
-            />
+          />
+          <button class="close-button" @click="closeButtonHandler">
+            <Icon name="heroicons:x-mark" class="close-icon" />
           </button>
         </div>
 
@@ -286,16 +267,10 @@ watch(Escape, () => {
                   v-if="getNavItemMeta(result?.item?.path)?.directoryIcon"
                   :name="getNavItemMeta(result?.item?.path)?.directoryIcon"
                 />
-                <Icon
-                  v-else
-                  name="solar:documents-bold-duotone"
-                />
+                <Icon v-else name="solar:documents-bold-duotone" />
                 <span v-if="getNavItemMeta(result?.item?.path)?.directoryTitle">
                   {{ getNavItemMeta(result?.item?.path)?.directoryTitle }}
-                  <span
-                    class="arrow"
-                    v-html="`→`"
-                  />
+                  <span class="arrow" v-html="`→`" />
                 </span>
                 <span>
                   {{ result.item.title }}
@@ -306,26 +281,18 @@ watch(Escape, () => {
                 class="search-result-content-preview"
               >
                 <span>“</span>
-                <span
-                  v-html="`${highlight(q, result?.matches?.[0] as any)}`"
-                />
+                <span v-html="`${highlight(q, result?.matches?.[0] as any)}`" />
                 <span>“</span>
               </p>
             </div>
           </div>
         </div>
 
-        <div
-          v-else-if="!q"
-          class="search-results empty"
-        >
+        <div v-else-if="!q" class="search-results empty">
           Type your query to search docs
         </div>
 
-        <div
-          v-else
-          class="search-results empty"
-        >
+        <div v-else class="search-results empty">
           No results found. Try another query
         </div>
       </div>
@@ -341,23 +308,23 @@ css({
       borderRadius: '{radii.md}',
       display: 'flex',
       alignItems: 'center',
-      color: '{color.gray.500}',
+      color: '{huyooo.color.gray.500}',
       borderStyle: 'solid',
       borderWidth: '1px',
-      borderColor: '{color.gray.100}',
+      borderColor: '{huyooo.color.gray.100}',
       fontSize: '{fontSize.xs}',
       gap: '{space.2}',
       padding: '{space.rem.375}',
       '@dark': {
-        color: '{color.gray.400}',
-        borderColor: '{color.gray.900}',
+        color: '{huyooo.color.gray.400}',
+        borderColor: '{huyooo.color.gray.900}',
       },
       '&:hover': {
-        color: '{color.gray.700}',
-        borderColor: '{color.gray.400}',
+        color: '{huyooo.color.gray.700}',
+        borderColor: '{huyooo.color.gray.400}',
         '@dark': {
-          color: '{color.gray.200}',
-          borderColor: '{color.gray.700}',
+          color: '{huyooo.color.gray.200}',
+          borderColor: '{huyooo.color.gray.700}',
         }
       },
       span: {

@@ -1,26 +1,36 @@
 <script setup lang="ts">
-const socials = ['twitter', 'facebook', 'instagram', 'tiktok', 'youtube', 'github', 'medium']
+const socials = [
+  "twitter",
+  "facebook",
+  "instagram",
+  "tiktok",
+  "youtube",
+  "github",
+  "medium",
+];
 
-const { config } = useDocus()
+const { config } = useDocus();
 
 const icons = computed<any>(() => {
   return Object.entries(config.value.socials || {})
     .map(([key, value]) => {
-      if (typeof value === 'object') {
-        return value
-      } else if (typeof value === 'string' && value && socials.includes(key)) {
+      if (typeof value === "object") {
+        return value;
+      } else if (typeof value === "string" && value && socials.includes(key)) {
         return {
-          href: /^https?:\/\//.test(value) ? value : `https://${key}.com/${value}`,
+          href: /^https?:\/\//.test(value)
+            ? value
+            : `https://${key}.com/${value}`,
           icon: `fa-brands:${key}`,
           label: value,
-          rel: 'noopener noreferrer'
-        }
+          rel: "noopener noreferrer",
+        };
       } else {
-        return null
+        return null;
       }
     })
-    .filter(Boolean)
-})
+    .filter(Boolean);
+});
 </script>
 
 <template>
@@ -33,10 +43,7 @@ const icons = computed<any>(() => {
     :href="icon.href"
     target="_blank"
   >
-    <Icon
-      v-if="icon.icon"
-      :name="icon.icon"
-    />
+    <Icon v-if="icon.icon" :name="icon.icon" />
   </NuxtLink>
 </template>
 
@@ -44,17 +51,17 @@ const icons = computed<any>(() => {
 css({
   a: {
     display: 'flex',
-    color: '{color.gray.500}',
+    color: '{huyooo.color.gray.500}',
     padding: '{space.4}',
 
     '@dark': {
-      color: '{color.gray.400}'
+      color: '{huyooo.color.gray.400}'
     },
 
     '&:hover': {
-      color: '{color.gray.700}',
+      color: '{huyooo.color.gray.700}',
       '@dark': {
-        color: '{color.gray.200}',
+        color: '{huyooo.color.gray.200}',
       }
     },
   }

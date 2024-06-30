@@ -1,19 +1,19 @@
 <script setup lang="ts">
-const { config } = useDocus()
-const socialIcons = ref(null)
-const icons = computed(() => config.value?.footer?.iconLinks || [])
-const textLinks = computed(() => config.value?.footer?.textLinks || [])
-const socialIconsCount = computed(() => Object.entries(config.value?.socials || {}).filter(([, v]) => v).length)
-const nbSocialIcons = computed(() => (socialIcons.value ? socialIconsCount.value : 0))
+const { config } = useDocus();
+const socialIcons = ref(null);
+const icons = computed(() => config.value?.footer?.iconLinks || []);
+const textLinks = computed(() => config.value?.footer?.textLinks || []);
+const socialIconsCount = computed(
+  () => Object.entries(config.value?.socials || {}).filter(([, v]) => v).length
+);
+const nbSocialIcons = computed(() =>
+  socialIcons.value ? socialIconsCount.value : 0
+);
 </script>
 
 <template>
   <footer>
-    <Container
-      :fluid="config?.footer?.fluid"
-      padded
-      class="footer-container"
-    >
+    <Container :fluid="config?.footer?.fluid" padded class="footer-container">
       <!-- Left -->
       <div class="left">
         <a
@@ -27,7 +27,9 @@ const nbSocialIcons = computed(() => (socialIcons.value ? socialIconsCount.value
             :name="config?.footer?.credits?.icon"
             class="left-icon"
           />
-          <p v-if="config?.footer?.credits?.text">{{ config.footer.credits.text }}</p>
+          <p v-if="config?.footer?.credits?.text">
+            {{ config.footer.credits.text }}
+          </p>
         </a>
       </div>
 
@@ -91,14 +93,14 @@ css({
       },
 
       a: {
-        color: '{color.gray.500}',
+        color: '{huyooo.color.gray.500}',
         '@dark': {
-          color: '{color.gray.400}'
+          color: '{huyooo.color.gray.400}'
         },
         '&:hover': {
-          color: '{color.gray.700}',
+          color: '{huyooo.color.gray.700}',
           '@dark': {
-            color: '{color.gray.200}',
+            color: '{huyooo.color.gray.200}',
           }
         },
       },

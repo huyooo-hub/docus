@@ -1,51 +1,37 @@
 <script setup lang="ts">
-const { navigation } = useContent()
-const { config } = useDocus()
+const { navigation } = useContent();
+const { config } = useDocus();
 
-const show = ref(false)
+const show = ref(false);
 
-const filtered = computed(() => config.value.aside?.exclude || [])
+const filtered = computed(() => config.value.aside?.exclude || []);
 
 const links = computed(() => {
   return (navigation.value || []).filter((item: any) => {
-    if (filtered.value.includes(item._path)) { return false }
-    return true
-  })
-})
+    if (filtered.value.includes(item._path)) {
+      return false;
+    }
+    return true;
+  });
+});
 
-const { close, open } = useMenu()
+const { close, open } = useMenu();
 
-watch(show, v => (v ? open() : close()))
+watch(show, (v) => (v ? open() : close()));
 </script>
 
 <template>
-  <button
-    aria-label="Menu"
-    @click="show = true"
-  >
-    <Icon
-      name="heroicons-outline:menu"
-      aria-hidden="”true”"
-    />
+  <button aria-label="Menu" @click="show = true">
+    <Icon name="heroicons-outline:menu" aria-hidden="”true”" />
   </button>
 
   <!-- eslint-disable-next-line vue/no-multiple-template-root -->
   <teleport to="body">
-    <nav
-      v-if="show"
-      class="dialog"
-      @click="show = false"
-    >
+    <nav v-if="show" class="dialog" @click="show = false">
       <div @click.stop>
         <div class="wrapper">
-          <button
-            aria-label="Menu"
-            @click="show = false"
-          >
-            <Icon
-              name="heroicons-outline:x"
-              aria-hidden="”true”"
-            />
+          <button aria-label="Menu" @click="show = false">
+            <Icon name="heroicons-outline:x" aria-hidden="”true”" />
           </button>
 
           <div class="icons">
@@ -69,14 +55,14 @@ css({
     '@lg': {
       display: 'none'
     },
-    color: '{color.gray.500}',
+    color: '{huyooo.color.gray.500}',
     '@dark': {
-      color: '{color.gray.400}',
+      color: '{huyooo.color.gray.400}',
     },
     '&:hover': {
-      color: '{color.gray.700}',
+      color: '{huyooo.color.gray.700}',
       '@dark': {
-        color: '{color.gray.200}',
+        color: '{huyooo.color.gray.200}',
       }
     },
   },
@@ -105,9 +91,9 @@ css({
       minHeight: '100%',
       boxShadow: '{shadow.md}',
       px: '{space.4}',
-      backgroundColor: '{color.white}',
+      backgroundColor: '{huyooo.color.white}',
       '@dark': {
-        backgroundColor: '{color.black}',
+        backgroundColor: '{huyooo.color.black}',
       },
       '@sm': {
         px: '{space.6}',

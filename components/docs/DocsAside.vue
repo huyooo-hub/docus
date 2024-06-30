@@ -1,22 +1,12 @@
 <script setup lang="ts">
-const { tree } = useDocus()
+const { tree } = useDocus();
 </script>
 
 <template>
   <nav>
-    <DocsAsideTree
-      v-if="tree?.length > 0"
-      :links="tree"
-    />
-    <NuxtLink
-      v-else
-      to="/"
-      class="go-back-link"
-    >
-      <Icon
-        name="heroicons-outline:arrow-left"
-        class="icon"
-      />
+    <DocsAsideTree v-if="tree?.length > 0" :links="tree" />
+    <NuxtLink v-else to="/" class="go-back-link">
+      <Icon name="heroicons-outline:arrow-left" class="icon" />
       <span class="text">Go back</span>
     </NuxtLink>
   </nav>
@@ -30,9 +20,9 @@ css({
     fontSize: '{text.sm.fontSize}',
     lineHeight: '{text.sm.lineHeight}',
     cursor: 'pointer',
-    color: '{color.gray.500}',
+    color: '{huyooo.color.gray.500}',
     '&:hover': {
-      color: '{color.gray.700}',
+      color: '{huyooo.color.gray.700}',
     },
     '.icon': {
       width: '{space.4}',

@@ -1,54 +1,68 @@
 <script setup lang="ts">
-const { page } = useContent()
-const { config, tree } = useDocus()
-const route = useRoute()
+const { page } = useContent();
+const { config, tree } = useDocus();
+const route = useRoute();
 
 const fallbackValue = (value: string, fallback = true) => {
-  if (typeof page.value?.[value] !== 'undefined') { return page.value[value] }
-  return fallback
-}
+  if (typeof page.value?.[value] !== "undefined") {
+    return page.value[value];
+  }
+  return fallback;
+};
 
-const hasBody = computed(() => !page.value || page.value?.body?.children?.length > 0)
-const hasToc = computed(() => page.value?.toc !== false && page.value?.body?.toc?.links?.length >= 2)
+const hasBody = computed(
+  () => !page.value || page.value?.body?.children?.length > 0
+);
+const hasToc = computed(
+  () => page.value?.toc !== false && page.value?.body?.toc?.links?.length >= 2
+);
 
-const hasAside = computed(() => page.value?.aside !== false && (tree.value?.length > 1 || tree.value?.[0]?.children?.length))
-const bottom = computed(() => fallbackValue('bottom', true))
-const isOpen = ref(false)
+const hasAside = computed(
+  () =>
+    page.value?.aside !== false &&
+    (tree.value?.length > 1 || tree.value?.[0]?.children?.length)
+);
+const bottom = computed(() => fallbackValue("bottom", true));
+const isOpen = ref(false);
 
 /*
-** This below is a workaround until Nuxt has a proper support for layouts and Suspense
-*/
-const asideNav = ref<any>(null)
+ ** This below is a workaround until Nuxt has a proper support for layouts and Suspense
+ */
+const asideNav = ref<any>(null);
 
-const getParentPath = () => route.path.split('/').slice(0, 2).join('/')
-const asideScroll = useState('asideScroll', () => {
+const getParentPath = () => route.path.split("/").slice(0, 2).join("/");
+const asideScroll = useState("asideScroll", () => {
   return {
     parentPath: getParentPath(),
-    scrollTop: asideNav.value?.scrollTop || 0
-  }
-})
+    scrollTop: asideNav.value?.scrollTop || 0,
+  };
+});
 
-function watchScrollHeight () {
-  if (!asideNav.value) { return }
-  if (asideNav.value.scrollHeight === 0) {
-    setTimeout(watchScrollHeight, 0)
+function watchScrollHeight() {
+  if (!asideNav.value) {
+    return;
   }
-  asideNav.value.scrollTop = asideScroll.value.scrollTop
+  if (asideNav.value.scrollHeight === 0) {
+    setTimeout(watchScrollHeight, 0);
+  }
+  asideNav.value.scrollTop = asideScroll.value.scrollTop;
 }
 
 onMounted(() => {
   if (asideScroll.value.parentPath !== getParentPath()) {
-    asideScroll.value.parentPath = getParentPath()
-    asideScroll.value.scrollTop = 0
+    asideScroll.value.parentPath = getParentPath();
+    asideScroll.value.scrollTop = 0;
   } else {
-    watchScrollHeight()
+    watchScrollHeight();
   }
-})
+});
 
 onBeforeUnmount(() => {
-  if (!asideNav.value) { return }
-  asideScroll.value.scrollTop = asideNav.value.scrollTop
-})
+  if (!asideNav.value) {
+    return;
+  }
+  asideScroll.value.scrollTop = asideNav.value.scrollTop;
+});
 </script>
 
 <template>
@@ -63,22 +77,17 @@ onBeforeUnmount(() => {
     }"
   >
     <!-- Aside -->
-    <aside
-      v-if="hasAside"
-      ref="asideNav"
-      class="aside-nav"
-    >
+    <aside v-if="hasAside" ref="asideNav" class="aside-nav">
       <DocsAside class="app-aside" />
     </aside>
 
     <!-- Page Body -->
     <article class="page-body">
       <slot v-if="hasBody" />
-      <Alert
-        v-else
-        type="info"
-      >
-        Start writing in <ProseCodeInline>content/{{ page._file }}</ProseCodeInline> to see this page taking shape.
+      <Alert v-else type="info">
+        Start writing in
+        <ProseCodeInline>content/{{ page._file }}</ProseCodeInline> to see this
+        page taking shape.
       </Alert>
       <template v-if="hasBody && page && bottom">
         <DocsPageBottom />
@@ -87,10 +96,7 @@ onBeforeUnmount(() => {
     </article>
 
     <!-- TOC -->
-    <div
-      v-if="hasToc"
-      class="toc"
-    >
+    <div v-if="hasToc" class="toc">
       <div class="toc-wrapper">
         <button @click="isOpen = !isOpen">
           <span class="title">Table of Contents</span>
@@ -101,10 +107,7 @@ onBeforeUnmount(() => {
           />
         </button>
 
-        <div
-          class="docs-toc-wrapper"
-          :class="[isOpen && 'opened']"
-        >
+        <div class="docs-toc-wrapper" :class="[isOpen && 'opened']">
           <DocsToc @move="isOpen = false" />
         </div>
       </div>
@@ -190,21 +193,21 @@ css({
       marginBottom: '{space.8}',
       paddingBottom: '{space.8}',
       borderBottom: '1px solid {elements.border.primary.static}',
-      color: '{color.gray.500}',
+      color: '{huyooo.color.gray.500}',
       '@sm': {
         fontSize: '{text.lg.fontSize}',
         lineHeight: '{text.lg.lineHeight}',
       },
       '@dark': {
-        color: '{color.gray.400}',
+        color: '{huyooo.color.gray.400}',
       },
       a: {
-        color: '{color.gray.700}',
+        color: '{huyooo.color.gray.700}',
         '@dark': {
-          color: '{color.gray.200}',
+          color: '{huyooo.color.gray.200}',
         },
         "&:hover": {
-          borderColor: '{color.gray.700}'
+          borderColor: '{huyooo.color.gray.700}'
         }
       }
     },

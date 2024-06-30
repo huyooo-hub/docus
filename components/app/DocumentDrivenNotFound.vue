@@ -1,25 +1,15 @@
 <template>
   <div class="document-driven-not-found not-prose">
     <main>
-      <p>
-        404
-      </p>
+      <p>404</p>
       <div class="content">
         <div class="text-section">
-          <h1>
-            Not Found
-          </h1>
-          <p>
-            This is not the page you're looking for.
-          </p>
+          <h1>Not Found</h1>
+          <p>This is not the page you're looking for.</p>
         </div>
 
         <div class="button-section">
-          <ButtonLink
-            href="/"
-            size="large"
-            variant="primary"
-          >
+          <ButtonLink href="/" size="large" variant="primary">
             Go back home
           </ButtonLink>
         </div>
@@ -63,7 +53,7 @@ css({
         fontSize: '{fontSize.4xl}',
         fontWeight: '{fontWeight.bold}',
         lineHeight: '{lead.tight}',
-        color: '{color.primary.500}',
+        color: '{huyooo.color.primary.500}',
         '@sm': {
           fontSize: '{fontSize.5xl}',
         }
@@ -71,17 +61,17 @@ css({
 
       '.content': {
         '.text-section': {
-          borderColor: '{color.gray.200}',
+          borderColor: '{huyooo.color.gray.200}',
           borderLeftStyle: 'solid',
           borderLeftWidth: '1px',
           border: 'none',
 
           '@dark': {
-            borderColor: '{color.gray.800}',
+            borderColor: '{huyooo.color.gray.800}',
           },
 
           '@sm': {
-            borderColor: '{color.gray.200}',
+            borderColor: '{huyooo.color.gray.200}',
             borderLeftStyle: 'solid',
             borderLeftWidth: '1px',
             paddingLeft: '{space.6}'
@@ -91,9 +81,9 @@ css({
             fontSize: '{fontSize.4xl}',
             fontWeight: '{fontWeight.extrabold}',
             letterSpacing: '{letterSpacing.tight}',
-            color: '{color.gray.900}',
+            color: '{huyooo.color.gray.900}',
             '@dark': {
-              color: '{color.gray.200}',
+              color: '{huyooo.color.gray.200}',
             },
             '@sm': {
               fontSize: '{fontSize.5xl}',
@@ -103,9 +93,9 @@ css({
           p: {
             marginTop: '{space.1}',
             fontSize: '{fontSize.xl}',
-            color: '{color.gray.700}',
+            color: '{huyooo.color.gray.700}',
             '@dark': {
-              color: '{color.gray.400}',
+              color: '{huyooo.color.gray.400}',
             },
           }
         },

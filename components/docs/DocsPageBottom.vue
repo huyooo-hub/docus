@@ -1,32 +1,26 @@
 <script setup lang="ts">
-const { page } = useContent()
-const { config } = useDocus()
+const { page } = useContent();
+const { config } = useDocus();
 </script>
 
 <template>
-  <div
-    v-if="page"
-    class="docs-page-bottom"
-  >
-    <div
-      v-if="config?.github?.edit"
-      class="edit-link"
-    >
+  <div v-if="page" class="docs-page-bottom">
+    <div v-if="config?.github?.edit" class="edit-link">
       <Icon name="uil:edit" />
-      <EditOnLink
-        v-slot="{ url }"
-        :page="page"
-      >
+      <EditOnLink v-slot="{ url }" :page="page">
         <ProseA :to="url">
-          <span>
-            Edit this page on GitHub
-          </span>
+          <span> Edit this page on GitHub </span>
         </ProseA>
       </EditOnLink>
     </div>
 
     <!-- Need to be supported by @nuxt/content -->
-    <span v-if="page?.mtime">Updated on <b>{{ new Intl.DateTimeFormat('en-US').format(Date.parse(page.mtime)) }}</b></span>
+    <span v-if="page?.mtime"
+      >Updated on
+      <b>{{
+        new Intl.DateTimeFormat("en-US").format(Date.parse(page.mtime))
+      }}</b></span
+    >
   </div>
 </template>
 
@@ -40,9 +34,9 @@ css({
     gap: '{space.4}',
     marginTop: '{space.8}',
     fontSize: '{fontSize.sm}',
-    color: '{color.gray.500}',
+    color: '{huyooo.color.gray.500}',
     '@dark': {
-      color: '{color.gray.400}'
+      color: '{huyooo.color.gray.400}'
     },
     '.edit-link': {
       flex: 1,

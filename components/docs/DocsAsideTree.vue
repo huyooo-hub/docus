@@ -1,66 +1,78 @@
 <script setup lang="ts">
-import type { PropType } from 'vue'
+import type { PropType } from "vue";
 
 const props = defineProps({
   links: {
     type: Array as PropType<any>,
-    default: () => []
+    default: () => [],
   },
   level: {
     type: Number,
-    default: 0
+    default: 0,
   },
   max: {
     type: Number,
-    default: null
+    default: null,
   },
   parent: {
     type: Object as PropType<any>,
-    default: null
-  }
-})
+    default: null,
+  },
+});
 
-const route = useRoute()
-const { config } = useDocus()
+const route = useRoute();
+const { config } = useDocus();
 
-const collapsedMap = useState(`docus-docs-aside-collapse-map-${props.parent?._path || '/'}`, () => {
-  if (props.level === 0) {
-    return {}
+const collapsedMap = useState(
+  `docus-docs-aside-collapse-map-${props.parent?._path || "/"}`,
+  () => {
+    if (props.level === 0) {
+      return {};
+    }
+    return (props.links as any[])
+      .filter((link) => !!link.children)
+      .reduce((map, link) => {
+        map[link._path] = true;
+        return map;
+      }, {});
   }
-  return (props.links as any [])
-    .filter(link => !!link.children)
-    .reduce((map, link) => {
-      map[link._path] = true
-      return map
-    }, {})
-})
+);
 
 const isActive = (link: any) => {
-  return route.path === link._path
-}
+  return route.path === link._path;
+};
 
 const isCollapsed = (link: any) => {
   if (link.children) {
     // Directory has been toggled manually, use its state
-    if (typeof collapsedMap.value[link._path] !== 'undefined') {
-      return collapsedMap.value[link._path]
+    if (typeof collapsedMap.value[link._path] !== "undefined") {
+      return collapsedMap.value[link._path];
     }
 
     // Check if aside.collapsed has been set in YML
-    if ([true, false].includes(link?.aside?.collapsed)) { return link.aside.collapsed }
+    if ([true, false].includes(link?.aside?.collapsed)) {
+      return link.aside.collapsed;
+    }
 
     // Return value grabbed from the link
-    if (link?.collapsed) { return link?.collapsed }
+    if (link?.collapsed) {
+      return link?.collapsed;
+    }
 
-    if (config?.value?.aside?.collapsed) { return config.value.aside?.collapsed }
+    if (config?.value?.aside?.collapsed) {
+      return config.value.aside?.collapsed;
+    }
   }
 
-  return false
-}
+  return false;
+};
 
-const toggleCollapse = (link: any) => (collapsedMap.value[link._path] = !isCollapsed(link))
+const toggleCollapse = (link: any) =>
+  (collapsedMap.value[link._path] = !isCollapsed(link));
 
-const hasNesting = computed(() => props.links.some((link: any) => link.children))
+const hasNesting = computed(() =>
+  props.links.some((link: any) => link.children)
+);
 </script>
 
 <template>
@@ -71,8 +83,8 @@ const hasNesting = computed(() => props.links.some((link: any) => link.children)
       :class="{
         'has-parent-icon': parent?.icon,
         'has-children': level > 0 && link.children,
-        'bordered': level > 0 || !hasNesting,
-        'active': isActive(link),
+        bordered: level > 0 || !hasNesting,
+        active: isActive(link),
       }"
     >
       <button
@@ -90,7 +102,11 @@ const hasNesting = computed(() => props.links.some((link: any) => link.children)
         </span>
         <span>
           <Icon
-            :name="isCollapsed(link) ? 'lucide:chevrons-up-down' : 'lucide:chevrons-down-up'"
+            :name="
+              isCollapsed(link)
+                ? 'lucide:chevrons-up-down'
+                : 'lucide:chevrons-down-up'
+            "
             class="collapsible-icon"
           />
         </span>
@@ -102,8 +118,8 @@ const hasNesting = computed(() => props.links.some((link: any) => link.children)
         class="link"
         :exact="link.exact"
         :class="{
-          'padded': level > 0 || !hasNesting,
-          'active': isActive(link),
+          padded: level > 0 || !hasNesting,
+          active: isActive(link),
         }"
       >
         <span class="content">
@@ -139,9 +155,9 @@ css({
           borderColor: '{elements.border.primary.hover}'
         },
         '&.active': {
-          borderColor: '{color.primary.400}',
+          borderColor: '{huyooo.color.primary.400}',
           '@dark': {
-            borderColor: '{color.primary.600}'
+            borderColor: '{huyooo.color.primary.600}'
           },
         },
         '&.has-children': {
@@ -164,9 +180,9 @@ css({
       lineHeight: '{text.sm.lineHeight}',
       fontWeight: '{fontWeight.semibold}',
       width: "100%",
-      color: '{color.gray.900}',
+      color: '{huyooo.color.gray.900}',
       '@dark': {
-        color: '{color.gray.50}'
+        color: '{huyooo.color.gray.50}'
       },
       '.content': {
         display: 'flex',
@@ -180,9 +196,9 @@ css({
       '.collapsible-icon': {
         width: '{space.3}',
         height: '{space.3}',
-        color: '{color.gray.400}',
+        color: '{huyooo.color.gray.400}',
         '@dark': {
-          color: '{color.gray.500}',
+          color: '{huyooo.color.gray.500}',
         }
       }
     },
@@ -193,15 +209,15 @@ css({
       padding: '{space.rem.375} 0',
       fontSize: '{text.sm.fontSize}',
       lineHeight: '{text.sm.lineHeight}',
-      color: '{color.gray.500}',
+      color: '{huyooo.color.gray.500}',
       '&:hover': {
-        color: '{color.gray.900}',
+        color: '{huyooo.color.gray.900}',
       },
       '@dark': {
         '&:not(.active)': {
-          color: '{color.gray.400}',
+          color: '{huyooo.color.gray.400}',
           '&:hover': {
-            color: '{color.gray.50}',
+            color: '{huyooo.color.gray.50}',
           }
         }
       },
@@ -209,7 +225,7 @@ css({
         paddingLeft: '{space.4}'
       },
       '&.active': {
-        color: '{color.primary.500}',
+        color: '{huyooo.color.primary.500}',
         fontWeight: '{fontWeight.medium}'
       },
       '.content': {

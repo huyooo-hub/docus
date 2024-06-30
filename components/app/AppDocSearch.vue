@@ -1,15 +1,11 @@
 <script setup lang="ts">
-const { element } = useDocSearch()
+const { element } = useDocSearch();
 
-const onClick = () => element.value.querySelector('button').click()
+const onClick = () => element.value.querySelector("button").click();
 </script>
 
 <template>
-  <button
-    type="button"
-    aria-label="Search"
-    @click="onClick"
-  >
+  <button type="button" aria-label="Search" @click="onClick">
     <span class="content">
       <Icon name="heroicons-outline:search" />
       <span>Search</span>
@@ -29,23 +25,23 @@ css({
       borderRadius: '{radii.md}',
       display: 'flex',
       alignItems: 'center',
-      color: '{color.gray.500}',
+      color: '{huyooo.color.gray.500}',
       borderStyle: 'solid',
       borderWidth: '1px',
-      borderColor: '{color.gray.100}',
+      borderColor: '{huyooo.color.gray.100}',
       fontSize: '{fontSize.xs}',
       gap: '{space.2}',
       padding: '{space.rem.375}',
       '@dark': {
-        color: '{color.gray.400}',
-        borderColor: '{color.gray.900}',
+        color: '{huyooo.color.gray.400}',
+        borderColor: '{huyooo.color.gray.900}',
       },
       '&:hover': {
-        color: '{color.gray.700}',
-        borderColor: '{color.gray.400}',
+        color: '{huyooo.color.gray.700}',
+        borderColor: '{huyooo.color.gray.400}',
         '@dark': {
-          color: '{color.gray.200}',
-          borderColor: '{color.gray.700}',
+          color: '{huyooo.color.gray.200}',
+          borderColor: '{huyooo.color.gray.700}',
         }
       },
       span: {
