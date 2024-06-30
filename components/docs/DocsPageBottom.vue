@@ -33,7 +33,7 @@ css({
     flexDirection: 'row',
     gap: '{huyooo.space.4}',
     marginTop: '{huyooo.space.8}',
-    fontSize: '{fontSize.sm}',
+    fontSize: '{huyooo.fontSize.sm}',
     color: '{huyooo.color.gray.500}',
     '@dark': {
       color: '{huyooo.color.gray.400}'

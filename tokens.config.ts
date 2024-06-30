@@ -117,7 +117,7 @@ export default defineTheme({
         },
       },
       title: {
-        fontSize: "{fontSize.2xl}",
+        fontSize: "{huyooo.fontSize.2xl}",
         fontWeight: "{huyooo.fontWeight.bold}",
         color: {
           static: {
@@ -149,7 +149,7 @@ export default defineTheme({
           initial: "{huyooo.color.gray.200}",
           dark: "transparent",
         },
-        fontSize: "{fontSize.sm}",
+        fontSize: "{huyooo.fontSize.sm}",
         gap: "{huyooo.space.2}",
         padding: "{huyooo.space.2} {huyooo.space.4}",
         backgroundColor: {

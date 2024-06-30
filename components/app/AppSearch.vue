@@ -312,7 +312,7 @@ css({
       borderStyle: 'solid',
       borderWidth: '1px',
       borderColor: '{huyooo.color.gray.100}',
-      fontSize: '{fontSize.xs}',
+      fontSize: '{huyooo.fontSize.xs}',
       gap: '{huyooo.space.2}',
       padding: '{huyooo.space.rem.375}',
       '@dark': {
@@ -330,7 +330,7 @@ css({
       span: {
         flex: 'none',
         display: 'none',
-        fontSize: '{fontSize.xs}',
+        fontSize: '{huyooo.fontSize.xs}',
         '@lg': {
           display: 'block'
         }

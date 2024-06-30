@@ -72,7 +72,7 @@ css({
         alignItems: 'center',
         gap: '{huyooo.space.2}',
         padding: '{huyooo.space.2} {huyooo.space.4}',
-        fontSize: '{fontSize.sm}',
+        fontSize: '{huyooo.fontSize.sm}',
         borderRadius: '{huyooo.radii.md}',
         outline: 'none',
         transition: 'background 200ms ease',

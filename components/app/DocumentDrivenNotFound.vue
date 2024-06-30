@@ -50,12 +50,12 @@ css({
 
       // 404
       '& > p': {
-        fontSize: '{fontSize.4xl}',
+        fontSize: '{huyooo.fontSize.4xl}',
         fontWeight: '{huyooo.fontWeight.bold}',
         lineHeight: '{lead.tight}',
         color: '{huyooo.color.primary.500}',
         '@sm': {
-          fontSize: '{fontSize.5xl}',
+          fontSize: '{huyooo.fontSize.5xl}',
         }
       },
 
@@ -78,7 +78,7 @@ css({
           },
 
           h1: {
-            fontSize: '{fontSize.4xl}',
+            fontSize: '{huyooo.fontSize.4xl}',
             fontWeight: '{huyooo.fontWeight.extrabold}',
             letterSpacing: '{letterSpacing.tight}',
             color: '{huyooo.color.gray.900}',
@@ -86,13 +86,13 @@ css({
               color: '{huyooo.color.gray.200}',
             },
             '@sm': {
-              fontSize: '{fontSize.5xl}',
+              fontSize: '{huyooo.fontSize.5xl}',
             },
           },
 
           p: {
             marginTop: '{huyooo.space.1}',
-            fontSize: '{fontSize.xl}',
+            fontSize: '{huyooo.fontSize.xl}',
             color: '{huyooo.color.gray.700}',
             '@dark': {
               color: '{huyooo.color.gray.400}',
