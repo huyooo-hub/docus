@@ -23,11 +23,11 @@ css({
   '.document-driven-not-found': {
     display: 'flex',
     flex: '1',
-    px: '{space.4}',
-    py: '{space.16}',
+    px: '{huyooo.space.4}',
+    py: '{huyooo.space.16}',
     '@sm': {
-      px: '{space.6}',
-      py: '{space.24}',
+      px: '{huyooo.space.6}',
+      py: '{huyooo.space.24}',
     },
 
     '@md': {
@@ -36,7 +36,7 @@ css({
     },
 
     '@lg': {
-      px: '{space.8}',
+      px: '{huyooo.space.8}',
     },
 
     main: {
@@ -45,7 +45,7 @@ css({
 
       '@sm': {
         display: 'flex',
-        gap: '{space.6}'
+        gap: '{huyooo.space.6}'
       },
 
       // 404
@@ -74,7 +74,7 @@ css({
             borderColor: '{huyooo.color.gray.200}',
             borderLeftStyle: 'solid',
             borderLeftWidth: '1px',
-            paddingLeft: '{space.6}'
+            paddingLeft: '{huyooo.space.6}'
           },
 
           h1: {
@@ -91,7 +91,7 @@ css({
           },
 
           p: {
-            marginTop: '{space.1}',
+            marginTop: '{huyooo.space.1}',
             fontSize: '{fontSize.xl}',
             color: '{huyooo.color.gray.700}',
             '@dark': {
@@ -102,9 +102,9 @@ css({
 
         // Button section
         '.button-section': {
-          marginTop: '{space.10}',
+          marginTop: '{huyooo.space.10}',
           flex: 'none',
-          gap: '{space.3}'
+          gap: '{huyooo.space.3}'
         }
       }
     }

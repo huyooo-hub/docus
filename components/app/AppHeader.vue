@@ -1,18 +1,20 @@
 <script setup lang="ts">
-const { config } = useDocus()
-const { navigation } = useContent()
-const { hasDocSearch } = useDocSearch()
+const { config } = useDocus();
+const { navigation } = useContent();
+const { hasDocSearch } = useDocSearch();
 
-const hasDialog = computed(() => navigation.value?.length > 1 || navigation.value?.[0]?.children?.length)
+const hasDialog = computed(
+  () => navigation.value?.length > 1 || navigation.value?.[0]?.children?.length
+);
 
 defineProps({
-  ...variants
-})
+  ...variants,
+});
 </script>
 
 <template>
   <header :class="{ 'has-dialog': hasDialog }">
-    <Container :fluid="config?.header?.fluid ">
+    <Container :fluid="config?.header?.fluid">
       <div class="section left">
         <AppHeaderDialog v-if="hasDialog" />
         <AppHeaderLogo />
@@ -25,10 +27,7 @@ defineProps({
 
       <div class="section right">
         <AppDocSearch v-if="hasDocSearch" />
-        <AppSearch
-          v-else
-          :fuse="config.fuse"
-        />
+        <AppSearch v-else :fuse="config.fuse" />
         <ThemeSelect />
         <div class="social-icons">
           <AppSocialIcons />
@@ -41,8 +40,8 @@ defineProps({
 <style scoped lang="ts">
 css({
   ':deep(.icon)': {
-    width: '{space.4}',
-    height: '{space.4}'
+    width: '{huyooo.space.4}',
+    height: '{huyooo.space.4}'
   },
 
   '.navbar-logo': {
@@ -76,7 +75,7 @@ css({
       display: 'grid',
       height: '100%',
       gridTemplateColumns: 'repeat(12, minmax(0, 1fr))',
-      gap: '{space.2}'
+      gap: '{huyooo.space.2}'
     },
 
     '.section': {
@@ -101,7 +100,7 @@ css({
         justifyContent: 'flex-end',
         alignItems: 'center',
         flex: 'none',
-        marginRight: 'calc(0px - {space.4})',
+        marginRight: 'calc(0px - {huyooo.space.4})',
         '.social-icons': {
           display: 'none',
           '@md': {

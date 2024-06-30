@@ -161,21 +161,21 @@ css({
           },
         },
         '&.has-children': {
-          paddingLeft: '{space.4}'
+          paddingLeft: '{huyooo.space.4}'
         },
         '&.has-parent-icon': {
-          marginLeft: '{space.2}'
+          marginLeft: '{huyooo.space.2}'
         }
       }
     },
     '.recursive': {
-      padding: '{space.2} 0'
+      padding: '{huyooo.space.2} 0'
     },
     '.title-collapsible-button': {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'space-between',
-      padding: '{space.rem.375} 0',
+      padding: '{huyooo.space.rem.375} 0',
       fontSize: '{text.sm.fontSize}',
       lineHeight: '{text.sm.lineHeight}',
       fontWeight: '{fontWeight.semibold}',
@@ -188,14 +188,14 @@ css({
         display: 'flex',
         alignItems: 'center',
         '.icon': {
-          width: '{space.4}',
-          height: '{space.4}',
-          marginRight: '{space.2}'
+          width: '{huyooo.space.4}',
+          height: '{huyooo.space.4}',
+          marginRight: '{huyooo.space.2}'
         }
       },
       '.collapsible-icon': {
-        width: '{space.3}',
-        height: '{space.3}',
+        width: '{huyooo.space.3}',
+        height: '{huyooo.space.3}',
         color: '{huyooo.color.gray.400}',
         '@dark': {
           color: '{huyooo.color.gray.500}',
@@ -206,7 +206,7 @@ css({
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'space-between',
-      padding: '{space.rem.375} 0',
+      padding: '{huyooo.space.rem.375} 0',
       fontSize: '{text.sm.fontSize}',
       lineHeight: '{text.sm.lineHeight}',
       color: '{huyooo.color.gray.500}',
@@ -222,7 +222,7 @@ css({
         }
       },
       '&.padded': {
-        paddingLeft: '{space.4}'
+        paddingLeft: '{huyooo.space.4}'
       },
       '&.active': {
         color: '{huyooo.color.primary.500}',
@@ -233,9 +233,9 @@ css({
         alignItems: 'center'
       },
       '.icon': {
-        width: '{space.4}',
-        height: '{space.4}',
-        marginRight: '{space.1}'
+        width: '{huyooo.space.4}',
+        height: '{huyooo.space.4}',
+        marginRight: '{huyooo.space.1}'
       }
     }
   }

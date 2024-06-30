@@ -25,11 +25,11 @@ css({
       color: '{huyooo.color.gray.700}',
     },
     '.icon': {
-      width: '{space.4}',
-      height: '{space.4}'
+      width: '{huyooo.space.4}',
+      height: '{huyooo.space.4}'
     },
     '.text': {
-      marginLeft: '{space.2}'
+      marginLeft: '{huyooo.space.2}'
     }
   }
 })

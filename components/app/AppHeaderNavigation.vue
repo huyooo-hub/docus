@@ -59,19 +59,19 @@ css({
       truncate: true,
 
       '& > * + *': {
-        marginLeft: '{space.2}'
+        marginLeft: '{huyooo.space.2}'
       },
 
       li: {
         display: 'inline-flex',
-        gap: '{space.1}',
+        gap: '{huyooo.space.1}',
       },
 
       '.link': {
         display: 'flex',
         alignItems: 'center',
-        gap: '{space.2}',
-        padding: '{space.2} {space.4}',
+        gap: '{huyooo.space.2}',
+        padding: '{huyooo.space.2} {huyooo.space.4}',
         fontSize: '{fontSize.sm}',
         borderRadius: '{huyooo.radii.md}',
         outline: 'none',

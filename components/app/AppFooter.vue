@@ -81,15 +81,15 @@ css({
       display: 'grid',
       gridTemplateColumns: 'repeat(12, minmax(0, 1fr))',
       justifyItems: 'center',
-      gap: '{space.2}',
+      gap: '{huyooo.space.2}',
       '@sm': {
         justifyItems: 'legacy',
 
       },
 
       ':deep(.icon)': {
-        width: '{space.4}',
-        height: '{space.4}'
+        width: '{huyooo.space.4}',
+        height: '{huyooo.space.4}'
       },
 
       a: {
@@ -108,7 +108,7 @@ css({
       '.left': {
         gridColumn: 'span 12 / span 12',
         display: 'flex',
-        py: '{space.4}',
+        py: '{huyooo.space.4}',
         order: 1,
 
         '@sm': {
@@ -129,10 +129,10 @@ css({
 
         '&-icon': {
           flexShrink: 0,
-          width: '{space.4}',
-          height: '{space.4}',
+          width: '{huyooo.space.4}',
+          height: '{huyooo.space.4}',
           fill: 'currentcolor',
-          marginRight: '{space.2}',
+          marginRight: '{huyooo.space.2}',
         },
       },
 
@@ -149,7 +149,7 @@ css({
         },
 
         '.text-link': {
-          padding: '{space.2}',
+          padding: '{huyooo.space.2}',
           fontSize: '{text.sm.fontSize}',
           lineHeight: '{text.sm.lineHeight}',
           fontWeight: '{fontWeight.medium}'
@@ -162,16 +162,16 @@ css({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'flex-end',
-        // marginLeft: 'calc(0px - {space.4})',
+        // marginLeft: 'calc(0px - {huyooo.space.4})',
 
         '@sm': {
           gridColumn: 'span 3 / span 3',
-          marginRight: 'calc(0px - {space.4})',
+          marginRight: 'calc(0px - {huyooo.space.4})',
         },
 
         '.icon-link': {
           display: 'flex',
-          padding: '{space.4}'
+          padding: '{huyooo.space.4}'
         }
       },
     },

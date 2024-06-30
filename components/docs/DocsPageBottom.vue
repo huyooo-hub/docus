@@ -31,8 +31,8 @@ css({
     alignItems: 'center',
     justifyContent: 'space-between',
     flexDirection: 'row',
-    gap: '{space.4}',
-    marginTop: '{space.8}',
+    gap: '{huyooo.space.4}',
+    marginTop: '{huyooo.space.8}',
     fontSize: '{fontSize.sm}',
     color: '{huyooo.color.gray.500}',
     '@dark': {
@@ -42,7 +42,7 @@ css({
       flex: 1,
       display: 'flex',
       alignItems: 'center',
-      gap: '{space.2}'
+      gap: '{huyooo.space.2}'
     }
   }
 })

@@ -67,20 +67,20 @@ function childMove(id: string) {
 css({
   '.docs-toc-links': {
     '.depth-3': {
-      paddingLeft: '{space.3}'
+      paddingLeft: '{huyooo.space.3}'
     },
     '.depth-4': {
-      paddingLeft: '{space.6}'
+      paddingLeft: '{huyooo.space.6}'
     },
     a: {
       display: 'block',
-      padding: '{space.1} 0',
+      padding: '{huyooo.space.1} 0',
       fontSize: '{text.sm.fontSize}',
       lineHeight: '{text.sm.lineHeight}',
       color: '{huyooo.color.gray.500}',
       truncate: true,
       '@lg': {
-        paddingRight: '{space.3}'
+        paddingRight: '{huyooo.space.3}'
       },
       '&:not(.active):hover': {
         color: '{huyooo.color.gray.900}',

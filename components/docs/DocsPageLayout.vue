@@ -123,7 +123,7 @@ css({
     flexDirection: 'column-reverse',
     '@lg': {
       display: 'grid',
-      gap: '{space.8}',
+      gap: '{huyooo.space.8}',
     },
     '&.has-toc': {
       '@lg': {
@@ -151,8 +151,8 @@ css({
       // gridColumn: 'span 2/span 2',
       alignSelf: 'flex-start',
       height: 'calc(100vh - {docus.header.height})',
-      py: '{space.8}',
-      paddingRight: '{space.8}',
+      py: '{huyooo.space.8}',
+      paddingRight: '{huyooo.space.8}',
       '.fluid &&': {
         borderRight: '1px solid {elements.border.primary.static}',
       }
@@ -163,14 +163,14 @@ css({
     display: 'flex',
     flexDirection: "column",
     flex: '1 1 0%',
-    py: '{space.8}',
+    py: '{huyooo.space.8}',
     width: '100%',
     // maxWidth: '{docus.readableLine}',
     mx: 'auto',
     '.has-toc &&': {
-      paddingTop: '{space.12}',
+      paddingTop: '{huyooo.space.12}',
       '@lg': {
-        paddingTop: '{space.8}',
+        paddingTop: '{huyooo.space.8}',
       }
     },
     '@lg': {
@@ -190,8 +190,8 @@ css({
     // `.not-prose` can be useful if creating <h1> with a component (404 page is an example)
     ':deep(h1:not(.not-prose)first-child + p)': {
       marginTop: 0,
-      marginBottom: '{space.8}',
-      paddingBottom: '{space.8}',
+      marginBottom: '{huyooo.space.8}',
+      paddingBottom: '{huyooo.space.8}',
       borderBottom: '1px solid {elements.border.primary.static}',
       color: '{huyooo.color.gray.500}',
       '@sm': {
@@ -212,24 +212,24 @@ css({
       }
     },
     '.docs-prev-next': {
-      marginTop: '{space.4}'
+      marginTop: '{huyooo.space.4}'
     }
   },
   '.toc': {
     position: 'sticky',
     top: '{docus.header.height}',
     display: 'flex',
-    mx: 'calc(0px - {space.4})',
+    mx: 'calc(0px - {huyooo.space.4})',
     overflow: 'auto',
     borderBottom: '1px solid {elements.border.primary.static}',
     '@sm': {
-      mx: 'calc(0px - {space.6})',
+      mx: 'calc(0px - {huyooo.space.6})',
     },
     '@lg': {
       mx: 0,
       alignSelf: 'flex-start',
-      py: '{space.8}',
-      px: '{space.8}',
+      py: '{huyooo.space.8}',
+      px: '{huyooo.space.8}',
       height: 'calc(100vh - {docus.header.height})',
       maxHeight: 'none',
       borderBottom: 'none',
@@ -251,10 +251,10 @@ css({
         alignItems: 'center',
         width: '100%',
         height: '100%',
-        py: '{space.4}',
-        px: '{space.4}',
+        py: '{huyooo.space.4}',
+        px: '{huyooo.space.4}',
         '@sm': {
-          px: '{space.6}',
+          px: '{huyooo.space.6}',
         },
         '@lg': {
           display: 'none'
@@ -263,11 +263,11 @@ css({
           fontSize: '{text.sm.fontSize}',
           lineHeight: '{text.sm.lineHeight}',
           fontWeight: '{fontWeight.semibold}',
-          marginRight: '{space.1}',
+          marginRight: '{huyooo.space.1}',
         },
         '.icon': {
-          width: '{space.4}',
-          height: '{space.4}',
+          width: '{huyooo.space.4}',
+          height: '{huyooo.space.4}',
           transition: 'transform 100ms',
           '&.rotate': {
             transform: 'rotate(90deg)'
@@ -276,14 +276,14 @@ css({
       },
       '.docs-toc-wrapper': {
         display: 'none',
-        marginBottom: '{space.4}',
+        marginBottom: '{huyooo.space.4}',
         '&.opened': {
           display: 'block',
-          px: '{space.4}',
+          px: '{huyooo.space.4}',
           maxHeight: '50vh',
           overflow: 'auto',
           '@sm': {
-            px: '{space.6}',
+            px: '{huyooo.space.6}',
           },
           '@lg': {
             maxHeight: 'none',

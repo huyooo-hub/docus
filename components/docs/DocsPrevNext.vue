@@ -49,7 +49,7 @@ css({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
-    gap: '{space.3}',
+    gap: '{huyooo.space.3}',
     '@sm': {
       flexDirection: 'row',
       alignItems: 'center'
@@ -57,7 +57,7 @@ css({
     a: {
       position: 'relative',
       minWidth: '0px',
-      padding: '{space.3}',
+      padding: '{huyooo.space.3}',
       border: '1px solid {elements.border.primary.static}',
       borderRadius: '{huyooo.radii.md}',
       '&:hover': {
@@ -74,10 +74,10 @@ css({
       '&.prev': {
         textAlign: 'left',
         display: 'flex',
-        gap: '{space.3}',
+        gap: '{huyooo.space.3}',
         '.directory': {
           display: 'block',
-          marginBottom: '{space.1}',
+          marginBottom: '{huyooo.space.1}',
           fontSize: '{text.xs.fontSize}',
           lineHeight: '{text.xs.lineHeight}',
           fontWeight: '{fontWeight.medium}',
@@ -94,10 +94,10 @@ css({
         textAlign: 'right',
         display: 'flex',
         justifyContent: 'flex-end',
-        gap: '{space.3}',
+        gap: '{huyooo.space.3}',
         '.directory': {
           display: 'block',
-          marginBottom: '{space.1}',
+          marginBottom: '{huyooo.space.1}',
           fontSize: '{text.xs.fontSize}',
           lineHeight: '{text.xs.lineHeight}',
           fontWeight: '{fontWeight.medium}',
@@ -117,8 +117,8 @@ css({
       '.icon': {
         alignSelf: 'flex-end',
         flexShrink: 0,
-        width: '{space.5}',
-        height: '{space.5}'
+        width: '{huyooo.space.5}',
+        height: '{huyooo.space.5}'
       },
       '.title': {
         flex: '1 1 0%',

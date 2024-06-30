@@ -52,7 +52,7 @@ css({
   a: {
     display: 'flex',
     color: '{huyooo.color.gray.500}',
-    padding: '{space.4}',
+    padding: '{huyooo.space.4}',
 
     '@dark': {
       color: '{huyooo.color.gray.400}'

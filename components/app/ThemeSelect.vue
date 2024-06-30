@@ -23,7 +23,7 @@ const onClick = () => {
 css({
   button: {
     display: 'flex',
-    padding: '{space.4}',
+    padding: '{huyooo.space.4}',
 
     color: '{huyooo.color.gray.500}',
     '@dark': {

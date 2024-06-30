@@ -20,7 +20,7 @@ const onClick = () => element.value.querySelector("button").click();
 <style scoped lang="ts">
 css({
   button: {
-    padding: '{space.2} {space.2}',
+    padding: '{huyooo.space.2} {huyooo.space.2}',
     '.content': {
       borderRadius: '{huyooo.radii.md}',
       display: 'flex',
@@ -30,8 +30,8 @@ css({
       borderWidth: '1px',
       borderColor: '{huyooo.color.gray.100}',
       fontSize: '{fontSize.xs}',
-      gap: '{space.2}',
-      padding: '{space.rem.375}',
+      gap: '{huyooo.space.2}',
+      padding: '{huyooo.space.rem.375}',
       '@dark': {
         color: '{huyooo.color.gray.400}',
         borderColor: '{huyooo.color.gray.900}',

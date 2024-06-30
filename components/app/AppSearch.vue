@@ -303,7 +303,7 @@ watch(Escape, () => {
 <style scoped lang="ts">
 css({
   button: {
-    padding: '{space.2} {space.2}',
+    padding: '{huyooo.space.2} {huyooo.space.2}',
     '.content': {
       borderRadius: '{huyooo.radii.md}',
       display: 'flex',
@@ -313,8 +313,8 @@ css({
       borderWidth: '1px',
       borderColor: '{huyooo.color.gray.100}',
       fontSize: '{fontSize.xs}',
-      gap: '{space.2}',
-      padding: '{space.rem.375}',
+      gap: '{huyooo.space.2}',
+      padding: '{huyooo.space.rem.375}',
       '@dark': {
         color: '{huyooo.color.gray.400}',
         borderColor: '{huyooo.color.gray.900}',
@@ -373,14 +373,14 @@ css({
         '.search-icon': {
           color: '{elements.text.tertiary.color.static}',
           flexShrink: 0,
-          marginLeft: '{space.4}',
-          marginRight: '{space.4}',
+          marginLeft: '{huyooo.space.4}',
+          marginRight: '{huyooo.space.4}',
           width: '{huyooo.size20}',
           height: '{huyooo.size20}',
         },
         '.close-button': {
           display: 'flex',
-          padding: '{space.3}',
+          padding: '{huyooo.space.3}',
         },
         '.close-icon': {
           color: '{elements.text.secondary.color.static}',
@@ -390,7 +390,7 @@ css({
         },
         input: {
           width: '100%',
-          padding: '{space.2} 0',
+          padding: '{huyooo.space.2} 0',
           color: '{elements.text.primary.color.static}',
           backgroundColor: 'transparent',
           '&:focus, &:focus-visible': {
@@ -420,7 +420,7 @@ css({
       },
 
       '.search-result': {
-        padding: '{space.1} {space.2}',
+        padding: '{huyooo.space.1} {huyooo.space.2}',
         cursor: 'pointer',
         display: 'flex',
         alignItems: 'center',
@@ -429,23 +429,23 @@ css({
         },
         '.search-result-content-wrapper': {
           display: 'flex',
-          gap: '{space.2}',
+          gap: '{huyooo.space.2}',
           borderRadius: '{huyooo.radii2xs}',
-          padding: '{space.2} 0',
+          padding: '{huyooo.space.2} 0',
           flexDirection: 'column',
           overflow: 'hidden'
         },
         '.search-result-content-head': {
           display: 'flex',
           alignItems: 'center',
-          gap: '{space.2}',
+          gap: '{huyooo.space.2}',
           svg: {
             flexShrink: '0',
             opacity: '0.5',
             width: '{huyooo.size20}',
             height: '{huyooo.size20}',
-            marginLeft: '{space.2}',
-            marginRight: '{space.2}',
+            marginLeft: '{huyooo.space.2}',
+            marginRight: '{huyooo.space.2}',
           },
           span: {
             whiteSpace: 'nowrap',

@@ -112,8 +112,8 @@ export default defineTheme({
       height: "64px",
       logo: {
         height: {
-          initial: "{space.6}",
-          sm: "{space.7}",
+          initial: "{huyooo.space.6}",
+          sm: "{huyooo.space.7}",
         },
       },
       title: {
@@ -130,7 +130,7 @@ export default defineTheme({
     },
     footer: {
       height: { initial: "145px", sm: "100px" },
-      padding: "{space.4} 0",
+      padding: "{huyooo.space.4} 0",
     },
     readableLine: "78ch",
     loadingBar: {
@@ -150,8 +150,8 @@ export default defineTheme({
           dark: "transparent",
         },
         fontSize: "{fontSize.sm}",
-        gap: "{space.2}",
-        padding: "{space.2} {space.4}",
+        gap: "{huyooo.space.2}",
+        padding: "{huyooo.space.2} {huyooo.space.4}",
         backgroundColor: {
           initial: "{huyooo.color.gray.200}",
           dark: "{huyooo.color.gray.800}",
@@ -161,7 +161,7 @@ export default defineTheme({
         window: {
           marginX: {
             initial: "0",
-            sm: "{space.4}",
+            sm: "{huyooo.space.4}",
           },
           borderRadius: {
             initial: "none",

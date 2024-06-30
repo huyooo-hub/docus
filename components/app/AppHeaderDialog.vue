@@ -51,7 +51,7 @@ css({
     position: 'relative',
     zIndex: '10',
     display: 'flex',
-    padding: '{space.4} {space.4} {space.4} 0',
+    padding: '{huyooo.space.4} {huyooo.space.4} {huyooo.space.4} 0',
     '@lg': {
       display: 'none'
     },
@@ -90,13 +90,13 @@ css({
       width: '100%',
       minHeight: '100%',
       boxShadow: '{huyooo.shadow.md}',
-      px: '{space.4}',
+      px: '{huyooo.space.4}',
       backgroundColor: '{huyooo.color.white}',
       '@dark': {
         backgroundColor: '{huyooo.color.black}',
       },
       '@sm': {
-        px: '{space.6}',
+        px: '{huyooo.space.6}',
       },
       // Dialog header
       '& > div': {
@@ -105,7 +105,7 @@ css({
         alignItems: 'center',
         justifyContent: 'space-between',
         borderBottom: '1px solid transparent',
-        gap: '{space.2}',
+        gap: '{huyooo.space.2}',
         '.icons': {
           display: 'flex',
           alignItems: 'center',
@@ -114,8 +114,8 @@ css({
     }
   },
   ':deep(.icon)': {
-    width: '{space.4}',
-    height: '{space.4}'
+    width: '{huyooo.space.4}',
+    height: '{huyooo.space.4}'
   }
 })
 </style>
