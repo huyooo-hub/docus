@@ -89,7 +89,7 @@ css({
       maxWidth: '{size.xs}',
       width: '100%',
       minHeight: '100%',
-      boxShadow: '{shadow.md}',
+      boxShadow: '{huyooo.shadow.md}',
       px: '{space.4}',
       backgroundColor: '{huyooo.color.white}',
       '@dark': {
