@@ -75,8 +75,8 @@ css({
     a: {
       display: 'block',
       padding: '{huyooo.space.1} 0',
-      fontSize: '{text.sm.fontSize}',
-      lineHeight: '{text.sm.lineHeight}',
+      fontSize: '{huyooo.text.sm.fontSize}',
+      lineHeight: '{huyooo.text.sm.lineHeight}',
       color: '{huyooo.color.gray.500}',
       truncate: true,
       '@lg': {

@@ -17,8 +17,8 @@ css({
   '.go-back-link': {
     display: 'flex',
     alignItems: 'center',
-    fontSize: '{text.sm.fontSize}',
-    lineHeight: '{text.sm.lineHeight}',
+    fontSize: '{huyooo.text.sm.fontSize}',
+    lineHeight: '{huyooo.text.sm.lineHeight}',
     cursor: 'pointer',
     color: '{huyooo.color.gray.500}',
     '&:hover': {

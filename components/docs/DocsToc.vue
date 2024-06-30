@@ -26,8 +26,8 @@ css({
       '@lg': {
         display: 'block',
         overflow: 'hidden',
-        fontSize: '{text.sm.fontSize}',
-        lineHeight: '{text.sm.lineHeight}',
+        fontSize: '{huyooo.text.sm.fontSize}',
+        lineHeight: '{huyooo.text.sm.lineHeight}',
         fontWeight: '{huyooo.fontWeight.semibold}'
       }
     }

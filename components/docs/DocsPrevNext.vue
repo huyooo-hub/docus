@@ -78,8 +78,8 @@ css({
         '.directory': {
           display: 'block',
           marginBottom: '{huyooo.space.1}',
-          fontSize: '{text.xs.fontSize}',
-          lineHeight: '{text.xs.lineHeight}',
+          fontSize: '{huyooo.text.xs.fontSize}',
+          lineHeight: '{huyooo.text.xs.lineHeight}',
           fontWeight: '{huyooo.fontWeight.medium}',
           color: '{huyooo.color.gray.500}',
           truncate: true
@@ -98,8 +98,8 @@ css({
         '.directory': {
           display: 'block',
           marginBottom: '{huyooo.space.1}',
-          fontSize: '{text.xs.fontSize}',
-          lineHeight: '{text.xs.lineHeight}',
+          fontSize: '{huyooo.text.xs.fontSize}',
+          lineHeight: '{huyooo.text.xs.lineHeight}',
           fontWeight: '{huyooo.fontWeight.medium}',
           color: '{huyooo.color.gray.500}',
           truncate: true
@@ -123,7 +123,7 @@ css({
       '.title': {
         flex: '1 1 0%',
         fontWeight: '{huyooo.fontWeight.medium}',
-        lineHeight: '{lead.5}',
+        lineHeight: '{huyooo.lead.5}',
         truncate: true
       }
     }

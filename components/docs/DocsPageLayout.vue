@@ -180,11 +180,11 @@ css({
     // `.not-prose` can be useful if creating <h1> with a component (404 page is an example)
     ':deep(h1:not(.not-prose):first-child)': {
       marginTop: 0,
-      fontSize: '{text.4xl.fontSize}',
-      lineHeight: '{text.4xl.lineHeight}',
+      fontSize: '{huyooo.text.4xl.fontSize}',
+      lineHeight: '{huyooo.text.4xl.lineHeight}',
       '@sm': {
-        fontSize: '{text.5xl.fontSize}',
-        lineHeight: '{text.5xl.lineHeight}',
+        fontSize: '{huyooo.text.5xl.fontSize}',
+        lineHeight: '{huyooo.text.5xl.lineHeight}',
       }
     },
     // `.not-prose` can be useful if creating <h1> with a component (404 page is an example)
@@ -195,8 +195,8 @@ css({
       borderBottom: '1px solid {elements.border.primary.static}',
       color: '{huyooo.color.gray.500}',
       '@sm': {
-        fontSize: '{text.lg.fontSize}',
-        lineHeight: '{text.lg.lineHeight}',
+        fontSize: '{huyooo.text.lg.fontSize}',
+        lineHeight: '{huyooo.text.lg.lineHeight}',
       },
       '@dark': {
         color: '{huyooo.color.gray.400}',
@@ -260,8 +260,8 @@ css({
           display: 'none'
         },
         '.title': {
-          fontSize: '{text.sm.fontSize}',
-          lineHeight: '{text.sm.lineHeight}',
+          fontSize: '{huyooo.text.sm.fontSize}',
+          lineHeight: '{huyooo.text.sm.lineHeight}',
           fontWeight: '{huyooo.fontWeight.semibold}',
           marginRight: '{huyooo.space.1}',
         },

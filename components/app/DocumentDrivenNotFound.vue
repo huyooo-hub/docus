@@ -52,7 +52,7 @@ css({
       '& > p': {
         fontSize: '{huyooo.fontSize.4xl}',
         fontWeight: '{huyooo.fontWeight.bold}',
-        lineHeight: '{lead.tight}',
+        lineHeight: '{huyooo.lead.tight}',
         color: '{huyooo.color.primary.500}',
         '@sm': {
           fontSize: '{huyooo.fontSize.5xl}',

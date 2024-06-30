@@ -122,8 +122,8 @@ css({
         },
 
         p: {
-          fontSize: '{text.xs.fontSize}',
-          lineHeight: '{text.xs.lineHeight}',
+          fontSize: '{huyooo.text.xs.fontSize}',
+          lineHeight: '{huyooo.text.xs.lineHeight}',
           fontWeight: '{huyooo.fontWeight.medium}'
         },
 
@@ -150,8 +150,8 @@ css({
 
         '.text-link': {
           padding: '{huyooo.space.2}',
-          fontSize: '{text.sm.fontSize}',
-          lineHeight: '{text.sm.lineHeight}',
+          fontSize: '{huyooo.text.sm.fontSize}',
+          lineHeight: '{huyooo.text.sm.lineHeight}',
           fontWeight: '{huyooo.fontWeight.medium}'
         }
 
