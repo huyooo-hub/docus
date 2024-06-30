@@ -142,7 +142,7 @@ export default defineTheme({
     search: {
       backdropFilter: "blur(24px)",
       input: {
-        borderRadius: "{radii.2xs}",
+        borderRadius: "{huyooo.radii2xs}",
         borderWidth: "1px",
         borderStyle: "solid",
         borderColor: {
@@ -165,7 +165,7 @@ export default defineTheme({
           },
           borderRadius: {
             initial: "none",
-            sm: "{radii.xs}",
+            sm: "{huyooo.radiixs}",
           },
           marginTop: {
             initial: "0",

@@ -22,7 +22,7 @@ css({
   button: {
     padding: '{space.2} {space.2}',
     '.content': {
-      borderRadius: '{radii.md}',
+      borderRadius: '{huyooo.radiimd}',
       display: 'flex',
       alignItems: 'center',
       color: '{huyooo.color.gray.500}',

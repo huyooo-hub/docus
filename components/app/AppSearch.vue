@@ -305,7 +305,7 @@ css({
   button: {
     padding: '{space.2} {space.2}',
     '.content': {
-      borderRadius: '{radii.md}',
+      borderRadius: '{huyooo.radiimd}',
       display: 'flex',
       alignItems: 'center',
       color: '{huyooo.color.gray.500}',
@@ -430,7 +430,7 @@ css({
         '.search-result-content-wrapper': {
           display: 'flex',
           gap: '{space.2}',
-          borderRadius: '{radii.2xs}',
+          borderRadius: '{huyooo.radii2xs}',
           padding: '{space.2} 0',
           flexDirection: 'column',
           overflow: 'hidden'
